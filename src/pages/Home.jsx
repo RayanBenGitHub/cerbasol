@@ -4,16 +4,6 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import '../App.css';
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
-const buttonVariants = {
-  hover: { scale: 1.05, transition: { duration: 0.2 } },
-  tap: { scale: 0.95 },
-};
-
 const Home = () => {
   const [products, setProducts] = useState([]);
   const { addToCart } = useCart();
@@ -43,58 +33,51 @@ const Home = () => {
   }
 
   return (
-    <div>
-      <header id="home" className="hero">
-        <h1>{t('welcomeheader')}</h1>
-        <p>{t('services')}</p>
-        <motion.button
-          className="cta-button"
-          variants={buttonVariants}
-          whileHover="hover"
-          whileTap="tap"
-        >
-          {t('discover_services')}
-        </motion.button>
-      </header>
-
-      <div id="products" className="product-page">
-        <h1 className="page-title">{t('products')}</h1>
-        <div className="product-carousel">
-          {groupedProducts.map((group, index) => (
-            <div key={index} className="product-row">
-              {group.map((product, idx) => (
-                <motion.div
-                  key={product.id}
-                  className="product-card"
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  transition={{ delay: idx * 0.1 }}
-                >
-                  <div className="product-image">
-                    <img
-                      src={`https://via.placeholder.com/300?text=${product.name}`}
-                      alt={product.name}
-                    />
-                  </div>
-                  <div className="product-info">
-                    <h2>{product.name}</h2>
-                    <p>{product.price}€</p>
-                    <motion.button
-                      className="add-to-cart-button"
-                      onClick={() => addToCart(product)}
-                      variants={buttonVariants}
-                      whileHover="hover"
-                      whileTap="tap"
-                    >
-                      {t('add_to_cart')}
-                    </motion.button>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          ))}
-        </div>
+    <div className="product-page">
+      <h1 className="page-title">{t('products')}</h1>
+      <div className="product-carousel">
+        {groupedProducts.map((group, rowIndex) => (
+          <motion.div
+            key={rowIndex}
+            className="product-row"
+            style={{ whiteSpace: 'nowrap', display: 'flex' }}
+            animate={{
+              x: ['0%', '-100%'], 
+            }}
+            transition={{
+              repeat: Infinity, 
+              duration: 10,
+              ease: 'linear',
+            }}
+            whileHover={{
+              animationPlayState: 'paused', 
+            }}
+          >
+            {[...group, ...group].map((product, idx) => (
+              <motion.div
+                key={`${rowIndex}-${idx}`}
+                className="product-card"
+                whileHover={{ scale: 1.1 }} 
+              >
+                <div className="product-image">
+                  <img src={`https://via.placeholder.com/300?text=${product.name}`} alt={product.name} />
+                </div>
+                <div className="product-info">
+                  <h2>{product.name}</h2>
+                  <p>{product.price}€</p>
+                  <motion.button
+                    className="add-to-cart-button"
+                    onClick={() => addToCart(product)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    {t('add_to_cart')}
+                  </motion.button>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        ))}
       </div>
     </div>
   );

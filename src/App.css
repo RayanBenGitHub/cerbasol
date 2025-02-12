@@ -154,13 +154,14 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow: hidden; 
 }
 
 .product-row {
   display: flex;
   gap: 20px;
   width: max-content;
-  animation: scrollProducts 10s linear infinite;
+  animation: scrollProducts 40s linear infinite;
 }
 
 .product-row:nth-child(even) {
@@ -178,7 +179,7 @@ h1, h2, h3 {
 
 /* Product Cards */
 .product-card {
-  flex: 0 0 30%;
+  flex: 0 0 calc(25% - 20px); 
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -188,6 +189,7 @@ h1, h2, h3 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.8s ease-in-out;
   overflow: hidden;
+  margin: 2px; 
 }
 
 .product-card:hover {
@@ -356,6 +358,29 @@ h1, h2, h3 {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .product-card img {
+    height: 180px; /* Taille d'image réduite pour les tablettes */
+  }
+
+  .product-info h2 {
+    font-size: 1.3rem; /* Taille de police réduite */
+  }
+
+  .product-info p {
+    font-size: 1rem; /* Taille de police réduite */
+  }
+
+  .add-to-cart-button {
+    padding: 0.6rem 1.2rem; /* Bouton plus compact */
+    font-size: 0.9rem;
+  }
+
+  .product-row {
+    animation-duration: 40s; /* Animation plus rapide */
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem;
@@ -394,18 +419,29 @@ h1, h2, h3 {
     font-size: 1rem;
   }
 
-  .product-card {
-    flex: 1 1 45%;
+  .product-card img {
+    height: 160px; /* Taille d'image réduite pour les petits écrans */
+  }
+
+  .product-info h2 {
+    font-size: 1.2rem; /* Taille de police réduite */
+  }
+
+  .product-info p {
+    font-size: 0.9rem; /* Taille de police réduite */
+  }
+
+  .add-to-cart-button {
+    padding: 0.5rem 1rem; /* Bouton plus compact */
+    font-size: 0.8rem;
   }
 
   .product-row {
-    flex-wrap: wrap;
-    justify-content: center;
+    animation-duration: 40s; /* Animation plus rapide */
   }
 }
 
 @media (max-width: 480px) {
-  
   .hero {
     padding: 3rem 1rem;
   }
@@ -418,11 +454,28 @@ h1, h2, h3 {
     font-size: 0.9rem;
   }
 
-  .product-card {
-    flex: 1 1 100%;
-  }
-
   .footer p {
     font-size: 0.9rem;
+  }
+
+  .product-card img {
+    height: 140px; /* Taille d'image réduite pour les mobiles */
+  }
+
+  .product-info h2 {
+    font-size: 1.1rem; /* Taille de police réduite */
+  }
+
+  .product-info p {
+    font-size: 0.8rem; /* Taille de police réduite */
+  }
+
+  .add-to-cart-button {
+    padding: 0.4rem 0.8rem; /* Bouton plus compact */
+    font-size: 0.7rem;
+  }
+
+  .product-row {
+    animation-duration: 40s; /* Animation plus rapide */
   }
 }
