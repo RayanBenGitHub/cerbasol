@@ -99,6 +99,7 @@ const Contact = () => {
         </motion.button>
       </form>
     </motion.div>
+
   );
 };
 
