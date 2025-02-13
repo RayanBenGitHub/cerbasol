@@ -10,7 +10,7 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #ECE6D6; 
   color: #333;
   line-height: 1.6;
 }
@@ -29,7 +29,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #1E3C58; 
   padding: 1rem 2rem;
   color: white;
 }
@@ -140,7 +140,7 @@ h1, h2, h3 {
 /* Product Page */
 .product-page {
   padding: 2rem;
-  background-color: #f4f4f4;
+  background-color: #ECE6D6; 
   overflow: hidden;
 }
 
@@ -154,7 +154,7 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .product-row {
@@ -241,7 +241,7 @@ h1, h2, h3 {
 
 /* Footer */
 .footer {
-  background-color: #333;
+  background-color: #FF6D41; 
   color: white;
   text-align: center;
   padding: 1.5rem 0;
@@ -251,6 +251,21 @@ h1, h2, h3 {
 .footer p {
   margin: 0;
   font-size: 1rem;
+}
+
+.footer-button {
+  display: inline-block;
+  padding: 8px 16px;
+  margin-top: 10px;
+  background-color: #FEB739; 
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-button:hover {
+  background-color: #FF6D41; 
 }
 
 /* Contact Page */
@@ -342,21 +357,6 @@ h1, h2, h3 {
   box-shadow: none;
 }
 
-.footer-button {
-  display: inline-block;
-  padding: 8px 16px;
-  margin-top: 10px;
-  background-color: #4CAF50;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.footer-button:hover {
-  background-color: #fa7b19;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
   .product-card img {
@@ -390,7 +390,7 @@ h1, h2, h3 {
     display: none;
     flex-direction: column;
     gap: 0.5rem;
-    background-color: #333;
+    background-color: #1E3C58; /* Couleur du header modifiée */
     position: absolute;
     top: 60px;
     right: 1rem;
