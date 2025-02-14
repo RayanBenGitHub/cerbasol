@@ -10,7 +10,7 @@
       <footer id="contact" className="footer">
         <p>{t('footer')}</p>
         <Link to="/contact" className="back-button">
-          Contact us
+        {t('Contact us')}
         </Link>
       </footer>
     );

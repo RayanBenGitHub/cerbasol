@@ -36,6 +36,7 @@ const LanguageSwitcher = () => {
           <li onClick={() => changeLanguage('fr')}>🇫🇷 Français</li>
           <li onClick={() => changeLanguage('en')}>🇬🇧 English</li>
           <li onClick={() => changeLanguage('es')}>🇪🇸 Español</li>
+          <li onClick={() => changeLanguage('de')}>de Deutsch</li>
         </ul>
       )}
     </div>
