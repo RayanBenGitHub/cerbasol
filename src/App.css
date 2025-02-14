@@ -31,7 +31,7 @@ h1, h2, h3 {
   align-items: center;
   background-color: #1E3C58; 
   padding: 1rem 2rem;
-  color: white;
+  color: #ECE6D6;
 }
 
 .nav-links {
@@ -45,7 +45,7 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-  color: white;
+  color: #ECE6D6;
   text-decoration: none;
   font-size: 1rem;
 }
@@ -65,40 +65,63 @@ h1, h2, h3 {
 
 .language-switcher {
   position: relative;
+  display: inline-block;
 }
 
 .language-button {
-  background: none;
+  width: 2rem;
+  height: 2rem;
+  background-image: url('../src/assets/images/language-icon.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   border: none;
-  color: white;
-  font-size: 1rem;
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  outline: none;
+  display: inline-block;
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.language-button:hover {
+  transform: scale(1.1);
+}
+
+.language-button:active {
+  transform: scale(0.95);
 }
 
 .language-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  top: 100%; 
+  left: 50%;
+  transform: translateX(-50%); 
+  background: #1F5B92;
+  color: #1E3C58;
+  border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  list-style: none;
   padding: 0.5rem 0;
-  width: 120px;
+  display: none; 
+  min-width: 6rem;
+  text-align: center;
   z-index: 10;
 }
 
+.language-switcher:hover .language-menu {
+  display: block; 
+}
+
 .language-menu li {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   cursor: pointer;
-  text-align: center;
-  color: #333;
+  color: #ECE6D6;
+  text-decoration: none;
+  font-size: 1rem;
+  list-style: none;
 }
 
 .language-menu li:hover {
-  background-color: #f4f4f4;
+  background: #518DC4;
 }
 
 /* Hero Section */
@@ -114,7 +137,7 @@ h1, h2, h3 {
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  color: #e65c00;
+  color: #518DC4;
 }
 
 .hero p {
@@ -134,7 +157,7 @@ h1, h2, h3 {
 }
 
 .cta-button:hover {
-  background-color: #e65c00;
+  background-color: #518DC4;
 }
 
 /* Product Page */
@@ -190,6 +213,8 @@ h1, h2, h3 {
   transition: transform 0.8s ease-in-out;
   overflow: hidden;
   margin: 2px; 
+  background-image: url('../src/assets/images/pdt-img-test.jpg');
+  background-size: contain;
 }
 
 .product-card:hover {
@@ -211,21 +236,26 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: #ECE6D6;
+  background-color: #1E3C58;
 }
 
 .product-info h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: #ECE6D6;
+  background-color: #1E3C58;
 }
 
 .product-info p {
   font-size: 1.2rem;
-  color: #333;
+  color: #ECE6D6;
+  background-color: #1E3C58;
 }
 
 .add-to-cart-button {
-  background-color: #fa7b19;
-  color: white;
+  background-color: #1F5B92;
+  color: #ECE6D6;
   border: none;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
@@ -236,13 +266,13 @@ h1, h2, h3 {
 }
 
 .add-to-cart-button:hover {
-  background-color: #ffa25b;
+  background-color: #518DC4;
 }
 
 /* Footer */
 .footer {
   background-color: #FF6D41; 
-  color: white;
+  color: #ECE6D6;
   text-align: center;
   padding: 1.5rem 0;
   margin-top: auto;
@@ -258,14 +288,14 @@ h1, h2, h3 {
   padding: 8px 16px;
   margin-top: 10px;
   background-color: #FEB739; 
-  color: white;
+  color: #1F5B92;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
 .footer-button:hover {
-  background-color: #FF6D41; 
+  background-color: #518DC4; 
 }
 
 /* Contact Page */
@@ -308,13 +338,13 @@ h1, h2, h3 {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: #fa7b19;
+  border-color: #1F5B92;
   outline: none;
 }
 
 .submit-button {
-  background-color: #fa7b19;
-  color: white;
+  background-color: #1F5B92;
+  color: #ECE6D6;
   border: none;
   padding: 1rem 2rem;
   font-size: 1rem;
@@ -324,14 +354,14 @@ h1, h2, h3 {
 }
 
 .submit-button:hover {
-  background-color: #ffa25b;
+  background-color: #518DC4;
 }
 
 .back-button {
   display: inline-flex;
   align-items: center;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #1F5B92;
+  color: #ebe8e1;
   padding: 10px 20px;
   border-radius: 30px;
   font-size: 16px;
@@ -346,8 +376,8 @@ h1, h2, h3 {
 }
 
 .back-button:hover {
-  background-color: #fa7b19;
-  color: white;
+  background-color: #518DC4;
+  color: #ECE6D6;
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -360,24 +390,24 @@ h1, h2, h3 {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .product-card img {
-    height: 180px; /* Taille d'image réduite pour les tablettes */
+    height: 180px; 
   }
 
   .product-info h2 {
-    font-size: 1.3rem; /* Taille de police réduite */
+    font-size: 1.3rem; 
   }
 
   .product-info p {
-    font-size: 1rem; /* Taille de police réduite */
+    font-size: 1rem; 
   }
 
   .add-to-cart-button {
-    padding: 0.6rem 1.2rem; /* Bouton plus compact */
+    padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
 
   .product-row {
-    animation-duration: 40s; /* Animation plus rapide */
+    animation-duration: 40s; 
   }
 }
 
@@ -390,7 +420,7 @@ h1, h2, h3 {
     display: none;
     flex-direction: column;
     gap: 0.5rem;
-    background-color: #1E3C58; /* Couleur du header modifiée */
+    background-color: #1E3C58; 
     position: absolute;
     top: 60px;
     right: 1rem;
@@ -420,24 +450,24 @@ h1, h2, h3 {
   }
 
   .product-card img {
-    height: 160px; /* Taille d'image réduite pour les petits écrans */
+    height: 160px; 
   }
 
   .product-info h2 {
-    font-size: 1.2rem; /* Taille de police réduite */
+    font-size: 1.2rem; 
   }
 
   .product-info p {
-    font-size: 0.9rem; /* Taille de police réduite */
+    font-size: 0.9rem; 
   }
 
   .add-to-cart-button {
-    padding: 0.5rem 1rem; /* Bouton plus compact */
+    padding: 0.5rem 1rem;
     font-size: 0.8rem;
   }
 
   .product-row {
-    animation-duration: 40s; /* Animation plus rapide */
+    animation-duration: 40s; 
   }
 }
 
@@ -459,23 +489,23 @@ h1, h2, h3 {
   }
 
   .product-card img {
-    height: 140px; /* Taille d'image réduite pour les mobiles */
+    height: 140px; 
   }
 
   .product-info h2 {
-    font-size: 1.1rem; /* Taille de police réduite */
+    font-size: 1.1rem; 
   }
 
   .product-info p {
-    font-size: 0.8rem; /* Taille de police réduite */
+    font-size: 0.8rem; 
   }
 
   .add-to-cart-button {
-    padding: 0.4rem 0.8rem; /* Bouton plus compact */
+    padding: 0.4rem 0.8rem; 
     font-size: 0.7rem;
   }
 
   .product-row {
-    animation-duration: 40s; /* Animation plus rapide */
+    animation-duration: 40s; 
   }
 }

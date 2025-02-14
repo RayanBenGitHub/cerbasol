@@ -7,5 +7,14 @@
   "discover_services": "Découvrir nos services",
   "products": "Produits",
   "add_to_cart": "Ajouter au panier",
-  "footer": "© 2025 CERBAMART SOLUTIONS SL-. Tous droits réservés."
+  "footer": "© 2025 CERBAMART SOLUTIONS SL-. Tous droits réservés.",
+  
+  "Home": "Accueil",
+  "Contact us": "Contactez-nous",
+  "name": "Nom",
+  "email": "Email",
+  "subject": "Objet",
+  "message": "Message",
+  "Send": "Envoyer",
+  "contact_form_submitted": "Votre formulaire a été soumis avec succès"
 }

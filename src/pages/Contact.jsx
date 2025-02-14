@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import '../App.css';
+import LanguageSwitcher from '../components/LanguageSwitcher'; 
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -28,6 +29,14 @@ const Contact = () => {
     console.log('Form Data:', formData);
   };
 
+  const languageSwitcherStyle = {
+    position: 'absolute',
+    top: '2vh',         
+    right: '2vw',       
+    fontSize: '1rem',
+    color: '#1F5B92',
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -40,6 +49,11 @@ const Contact = () => {
       </Link>
 
       <h1 className="page-title">{t('Contact us')}</h1>
+
+      <div style={languageSwitcherStyle}>
+        <LanguageSwitcher />
+      </div>
+
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">
           <label htmlFor="name">{t('name')}</label>
@@ -99,7 +113,6 @@ const Contact = () => {
         </motion.button>
       </form>
     </motion.div>
-
   );
 };
 

@@ -1,11 +1,20 @@
 {
   "welcome": "CERBAMART SOLUTIONS SL-",
   "welcomeheader": "CERBAMART SOLUTIONS",
-  "navhome": "Inico",
+  "navhome": "Inicio",
   "services": "Servicios",
   "contact": "Contacto",
   "discover_services": "Descubra nuestros servicios",
   "products": "Productos",
   "add_to_cart": "Añadir a la cesta",
-  "footer": "© 2025 CERBAMART SOLUTIONS SL-. Reservados todos los derechos."
+  "footer": "© 2025 CERBAMART SOLUTIONS SL-. Reservados todos los derechos.",
+  
+  "Home": "Inicio",
+  "Contact us": "Contáctenos",
+  "name": "Nombre",
+  "email": "Correo electrónico",
+  "subject": "Asunto",
+  "message": "Mensaje",
+  "Send": "Enviar",
+  "contact_form_submitted": "Su formulario ha sido enviado con éxito"
 }

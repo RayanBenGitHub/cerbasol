@@ -29,7 +29,6 @@ const LanguageSwitcher = () => {
   return (
     <div className="language-switcher" ref={dropdownRef}>
       <button className="language-button" onClick={() => setIsOpen(!isOpen)}>
-        🌍 {currentLanguage} ▼
       </button>
 
       {isOpen && (
